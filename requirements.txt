@@ -1,6 +1,6 @@
-streamlit==1.27.0
-autocorrect==2.6.1
-language-tool-python==2.7.1
-requests==2.31.0
-pyperclip==1.8.2
-nltk==3.8.1
+streamlit
+autocorrect
+language-tool-python
+requests
+pyperclip
+nltk
