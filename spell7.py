@@ -7,8 +7,17 @@ import pyperclip
 import nltk
 
 # Download required NLTK resources
-nltk.download('wordnet')
-nltk.download('omw-1.4')  # Download the Open Multilingual Wordnet
+def download_nltk_resources():
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet', quiet=True)
+    try:
+        nltk.data.find('corpora/omw-1.4')
+    except LookupError:
+        nltk.download('omw-1.4', quiet=True)
+
+download_nltk_resources()
 
 
 # Function to check spelling and grammar in the provided text
